@@ -4,7 +4,7 @@ Rebecca Wang
 2022 July 13
 '''
 
-import adafruit_motor
+from adafruit_motor import servo
 import board
 import time 
 import pwmio
@@ -14,7 +14,7 @@ import pwmio
 pwm = pwmio.PWMOut(board.A1, duty_cycle=2**15, frequency=50)
 
 # servo variable
-srv = adafruit_motor.servo.Servo(pwm)
+srv = servo.Servo(pwm)
 
 while True: 
     for ang in range(0, 185, 5):
